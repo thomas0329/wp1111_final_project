@@ -48,8 +48,6 @@ if (process.env.NODE_ENV === "production") {
 
 app.use('/', yoga);
 
-// app.use('/', yoga);
-
 // const server = createServer(yoga);
 
 // export default server;
