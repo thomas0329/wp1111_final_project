@@ -16,7 +16,7 @@ const httpLink = createHttpLink({
   uri: URI
 });
 
-const uploadLink = createUploadLink({ uri: 'http://localhost:4000' });
+const uploadLink = createUploadLink({ uri: URI });
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
