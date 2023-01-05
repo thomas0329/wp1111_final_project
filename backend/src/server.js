@@ -8,6 +8,7 @@ import { createServer } from 'node:http';
 import * as fs from 'fs';
 import express from 'express';
 import cors from 'cors';
+import path from "path";
 
 const pubsub = createPubSub();
 
