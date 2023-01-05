@@ -32,7 +32,7 @@ const yoga = createYoga({
 });
 
 const app = express();
-app.use('/', yoga);
+
 
 if (process.env.NODE_ENV === "development") {
   console.log('development mode');
@@ -45,6 +45,8 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.join(__dirname, "../frontend", "build", "index.html"));
   });
 }
+
+app.use('/', yoga);
 
 // app.use('/', yoga);
 
