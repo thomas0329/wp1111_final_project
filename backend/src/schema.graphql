@@ -1,0 +1,37 @@
+scalar Upload
+
+type Query {
+  _dummy: String
+  user(id: ID, name: String, email: String): User!
+  image(id: ID): [File]
+}
+
+type Mutation {
+  signup(email: String!, password: String!, name: String!): User
+  login(email: String!, password: String!): User
+  singleUpload(file: Upload!, link: String!, userEmail: String!): File
+}
+
+type User {
+  id: ID!
+  name: String!
+  email: String!
+}
+
+type Link{
+  url: [String]
+}
+
+type Img{
+  url: [String]
+}
+
+type File {
+  _id: ID!
+  name: String!
+  link: Link
+  img: Img
+}
+
+
+
